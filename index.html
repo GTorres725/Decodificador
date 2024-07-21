@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Decodificador</title>
+</head>
+<body class="light-mode">
+    <header>
+        <h1 class="logo fa-solid fa-user-secret" onclick="window.location.reload()"></h1>
+        <button class="modoVisualizacao fa-regular fa-moon"></button>
+    </header>
+    <main>
+       <section class="principal">
+            <div class="input">
+                <textarea name="" id="" placeholder="Digite seu texto"></textarea>
+            </div>
+
+            <div class="botoes-e-aviso">
+                <div class="aviso">
+                    <p>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        Apenas letras minúsculas e sem acento.
+                    </p>
+                </div>
+
+                <div class="botoes">
+                    <button class="crip flex" onclick="criptografar()">
+                        Criptografar
+                    </button>
+                    <button class="descrip flex" onclick="descriptografar()">
+                        Descriptografar
+                    </button>
+                </div>
+            </div>
+       </section>
+
+       <section class="secundario">
+            <div class="sec-espaco-text">
+                <textarea class="sec-text" readonly></textarea>
+            </div>
+
+            <div class="sec-espaco-bot">
+            <button class="botCopiar" onclick="copiar()">Copiar</button>
+            </div>
+       </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/*  */
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*  */
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*  */
+/* Váriaveis*/
+:root {
+    /* Tamanhos */
+    --header-width: 6%;
+    --principal-width: 65%;
+    --secundario-width: 30%;
+    --margin-height-section: 10%;
+    /* Cores */
+    --back-principal: #e5e5e5;
+    --back-secundario: #0f0f0f;
+    --back-and-font: #f6f6f6;
+    --bot-azul: #0a3871;
+    --bot-cinza: #d8dfe8;
+}
+/*  */
+/* Modo Visualização e body */
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: var(--bot-azul);
+    font-family: "Raleway", sans-serif;
+}
+/* dark */
+.dark-mode {
+    background-color: #000;
+    color: var(--back-and-font);
+}
+.dark-mode .secundario {
+    background-color: var(--back-secundario);
+}
+.dark-mode .modoVisualizacao {
+    background-color: #fff;
+    color: #000;
+}
+.dark-mode .sec-text {
+    color: var(--back-and-font);
+}
+.dark-mode .botCopiar:active {
+    background-color: var(--back-and-font);
+}
+/* light */
+.light-mode {
+    background-color: var(--back-principal);
+    color: #000;
+}
+.light-mode .principal {
+    background-color: var(--back-principal);
+    color: var(#000);
+}
+.light-mode .secundario {
+    background-color: var(--back-and-font);
+    color: #000;
+}
+.light-mode .modoVisualizacao {
+    background-color: #000;
+    color: var(--back-and-font);
+}
+.light-mode .botCopiar:active {
+    background-color: var(--back-secundario);
+}
+/*  */
+/* Header */
+header h1 {
+    cursor: pointer;
+    text-align: center;
+    font-size: 45px;
+    color: var(--bot-azul);
+}
+
+header button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
+    width: var(--header-width);
+    height: 100vh;
+    padding: 30px 0px;
+    background-color: none;
+}
+/*  */
+/* Main */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: calc(100vw - var(--header-width));
+}
+
+.principal {
+    width: var(--principal-width);
+    height: calc(100vh - var(--margin-height-section));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secundario {
+    width: var(--secundario-width);
+    height: calc(100vh - var(--margin-height-section));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Main Principal */
+.input {
+    width: 100%;
+    height: 80%;
+}
+
+.input textarea {
+    outline: none;
+    border: none;
+    background: none;
+    resize: none;
+    padding: 10% 16% 0% 16%;
+    font-size: 32px;
+    width: 100%;
+    height: 100%;
+    color: var(--bot-azul);
+}
+
+textarea::placeholder {
+    color: var(--bot-azul);
+}
+
+.botoes-e-aviso {
+    width: var(--principal-width);
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.aviso p {
+    font-size: 12px;
+    color: #495057;
+}
+
+.botoes {
+    display: flex;
+    width: 100%;
+    gap: 20%;
+}
+
+.botoes button {
+    height: 60px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.crip {
+    background-color: var(--bot-azul);
+    color: var(--back-principal);
+}
+.crip:active {
+    background-color: var(--bot-cinza);
+}
+
+.descrip {
+    background-color: var(--bot-cinza);
+    color: var(--bot-azul);
+}
+.descrip:active {
+    background-color: var(--bot-azul);
+}
+/* Main Secundario */
+.sec-espaco-text {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.sec-espaco-bot {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.botCopiar {
+    width: 60%;
+    height: 69%;
+    border-radius: 25px;
+    cursor: pointer;
+    background: none;
+    color: var(--bot-azul);
+}
+
+.sec-text {
+    width: 100%;
+    height: 100%;
+    max-height: 100% !important;
+    font-size: 24px;
+    margin-top: 5%;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+/*  */
+/* Demais Classes */
+button {
+    font-size: 16px;
+    border: 1px solid var(--bot-azul);
+    font-family: "Roboto", sans-serif;;
+
+}
+
+.flex {
+    flex: 1;
+}
+
+.vazioSec {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.vazioSec img {
+    max-width: 100%;
+}
